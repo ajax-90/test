@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="logic:ear">
+    <output-path>$PROJECT_DIR$/logic/target</output-path>
+    <root id="archive" name="logic-1.0-SNAPSHOT.ear">
+      <element id="artifact" artifact-name="logic:ear exploded" />
+    </root>
+  </artifact>
+</component>

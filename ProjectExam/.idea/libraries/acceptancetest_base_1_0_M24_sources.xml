@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="acceptancetest-base-1.0-M24-sources">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../acceptance-test-distribution/acceptance-test-distribution/acceptancetest-base-1.0-M24.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../acceptance-test-distribution/acceptance-test-distribution/acceptancetest-base-1.0-M24-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

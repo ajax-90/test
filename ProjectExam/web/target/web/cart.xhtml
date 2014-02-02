@@ -1,0 +1,46 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core"
+                template="template.xhtml">
+
+
+    <ui:define name="content">
+        <h3>Cart</h3>
+        <h:form id="orderedform">
+            <p:dataTable id="selectedItems"
+                         value="#{cartBean.selected}" var="item" style="width: 50%"
+                          selectionMode="single"
+                         rowKey="#{item.id}">
+
+                <p:column headerText="id">
+                    #{item.id}
+                </p:column>
+                <p:column headerText="Pic">
+                    <p:graphicImage value="/resources/images/#{item.pictureUrl}.jpg"
+                                    width="50px" height="60px"/>
+                </p:column>
+                <p:column headerText="Description" sortBy="#{item.description}"
+                          filterMatchMode="contains"
+                          filterBy="#{item.description}">
+                    <h:outputLabel value="#{item.description}"/>
+                </p:column>
+                <p:column headerText="Price" sortBy="price">
+                    #{item.price}
+                </p:column>
+                <p:column headerText="Amount" sortBy="amount">
+                    #{item.amount}
+                </p:column>
+                <p:column id="totalprice" headerText="TotalPrice" sortBy="amount">
+                    #{item.totalPrice}
+                </p:column>
+            </p:dataTable>
+            Sum of your order <p:outputLabel id="sum" value="#{adminBean.sum}"/>
+            <br/>Name: <p:inputText id="name" value="#{cartBean.name}"/>
+            <p:commandButton id="orderButton1" value="Done" action="#{cartBean.makeOrder}"/>
+            <br/><p:commandButton value="delete" id="btn" action="#{cartBean.delete}" update="selectedItems"/> Please choose unneeded product and push the button
+        </h:form>
+
+    </ui:define>
+</ui:composition>

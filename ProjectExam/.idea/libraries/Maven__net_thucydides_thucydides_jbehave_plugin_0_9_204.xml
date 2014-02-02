@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: net.thucydides:thucydides-jbehave-plugin:0.9.204">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/thucydides/thucydides-jbehave-plugin/0.9.204/thucydides-jbehave-plugin-0.9.204.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/net/thucydides/thucydides-jbehave-plugin/0.9.204/thucydides-jbehave-plugin-0.9.204-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/thucydides/thucydides-jbehave-plugin/0.9.204/thucydides-jbehave-plugin-0.9.204-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

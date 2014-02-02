@@ -1,0 +1,38 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core"
+                template="template.xhtml">
+
+
+    <ui:define name="content">
+        <h3>Admin page. All orders you can see there</h3>
+        <h:form id="adminForm">
+            <p:dataTable id="adminTable" value="#{adminBean.orders}" var="order" style="width: 50%">
+                <p:column headerText="User">
+                    #{order.name}
+                </p:column>
+
+                <p:column headerText="item0">
+                    #{order.selected[0].description}
+                </p:column>
+
+
+                <p:columns value="#{adminBean.selectedColumns}"
+                           sortBy="column" var="column"
+                           columnIndexVar="colIndex" width="230">
+
+                    <f:facet name="header">
+                        #{column}
+                    </f:facet>
+                    #{order.selected[colIndex].description} - #{order.selected[colIndex].amount}
+                </p:columns>
+
+                <p:column headerText="Sum">
+                    #{adminBean.sum}
+                </p:column>
+            </p:dataTable>
+        </h:form>
+    </ui:define>
+</ui:composition>

@@ -1,0 +1,7 @@
+#surefire_0
+#Fri Jan 17 12:43:28 EET 2014
+maven.test.failure.ignore=true
+user.dir=M\:\\Programming\\ProjectExam\\ProjectExam\\acceptanceTest
+webdriver.driver=firefox
+localRepository=C\:\\Users\\i_yak_000\\.m2\\repository
+basedir=M\:\\Programming\\ProjectExam\\ProjectExam\\acceptanceTest

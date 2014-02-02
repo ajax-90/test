@@ -1,0 +1,50 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                template="template.xhtml">
+
+
+    <ui:define name="content">
+
+
+                <h:form id="indexform">
+                    <p:dataTable id="menuTable" var="item"
+                                 value="#{menu.menuItemList}"
+                                 selection="#{cartBean.selected}"
+                                 filteredValue="#{menu.filtered}"
+                                 rowKey="#{item.id}">
+                        <p:column headerText="id">
+                            #{item.id}
+                        </p:column>
+                        <p:column headerText="Pic">
+                            <p:graphicImage value="/resources/images/#{item.pictureUrl}.jpg"
+                                            width="50px" height="60px"/>
+                        </p:column>
+                        <p:column headerText="Description" sortBy="#{item.description}"
+                                  filterMatchMode="contains"
+                                  filterBy="#{item.description}">
+                            <h:outputLabel value="#{item.description}"/>
+                        </p:column>
+                        <p:column headerText="Price" sortBy="price">
+                            #{item.price}
+                        </p:column>
+                        <p:column headerText="Amount" sortBy="amount">
+                            <p:spinner id="spinner" value="#{item.amount}" min="0" max="5">
+                                <p:ajax update="menuTable" process="@this" />
+                            </p:spinner>
+                        </p:column>
+                        <p:column id="totalprice" headerText="TotalPrice" sortBy="amount">
+                            #{item.totalPrice}
+                        </p:column>
+
+                        <p:column selectionMode="multiple" />
+                    </p:dataTable>
+                     Please choose products and push Order button
+                    <br/><p:commandButton value="Order" action="cart"/>
+
+                </h:form>
+
+    </ui:define>
+</ui:composition>

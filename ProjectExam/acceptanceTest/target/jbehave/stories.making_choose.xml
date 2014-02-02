@@ -1,0 +1,26 @@
+<story path="stories/making_choose.story" title="">
+<scenario keyword="Scenario:" title="user choose products and make order">
+<step outcome="failed" keyword="FAILED">When the user opens the default page<failure>net.thucydides.core.webdriver.UnsupportedDriverException: Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver</failure></step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">And clicks on element by &apos;.//*[@id=&apos;indexform:menuTable:0:spinner&apos;]/a[1]/span/span&apos;</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">And clicks on element by &apos;.//*[@id=&apos;indexform:menuTable:1:spinner&apos;]/a[1]/span/span&apos;</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">And clicks on element by &apos;.//*[@id=&apos;indexform:menuTable_data&apos;]/tr[2]/td[7]/div/div[2]&apos;</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">And clicks on element by &apos;.//*[@id=&apos;indexform:menuTable_data&apos;]/tr[1]/td[7]/div/div[2]&apos;</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">And press &apos;Order&apos; button</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">Then element with &apos;.//*[@id=&apos;orderedform:selectedItems_data&apos;]/tr[1]/td[3]/label&apos; has text &apos;item2&apos;</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">And element with &apos;.//*[@id=&apos;orderedform:selectedItems_data&apos;]/tr[2]/td[3]/label&apos; has text &apos;item1&apos;</step>
+<failure>net.thucydides.core.webdriver.UnsupportedDriverException: Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver
+	at net.thucydides.core.webdriver.WebDriverFacade.newDriverInstance(WebDriverFacade.java:92)
+	at net.thucydides.core.webdriver.WebDriverFacade.newProxyDriver(WebDriverFacade.java:83)
+	at net.thucydides.core.webdriver.WebDriverFacade.getProxiedDriver(WebDriverFacade.java:55)
+	at net.thucydides.core.webdriver.WebDriverFacade.openIgnoringHtmlUnitScriptErrors(WebDriverFacade.java:124)
+	at net.thucydides.core.webdriver.WebDriverFacade.get(WebDriverFacade.java:119)
+	at net.thucydides.core.pages.PageObject.openPageAtUrl(PageObject.java:685)
+	at net.thucydides.core.pages.PageObject.open(PageObject.java:606)
+	at net.thucydides.core.pages.PageObject.open(PageObject.java:594)
+	at com.engagepoint.acceptancetest.base.steps.JbehaveBaseSteps.openLink(JbehaveBaseSteps.java:44)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:550)
+	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:499)
+...</failure>
+</scenario>
+<scenario keyword="Scenario:" title="admin can see allorders">
