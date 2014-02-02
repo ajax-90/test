@@ -49,11 +49,11 @@ public class LoginBean {
         loggedIn = false;
 
         if(username != null  && username.equals("admin") && password != null  && password.equals("admin")) {
-            loggedIn = true;
-            msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Welcome", username);
+//            loggedIn = true;
+//            msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Welcome", username);
         } else {
-            loggedIn = false;
-            msg = new FacesMessage(FacesMessage.SEVERITY_WARN, "Login Error", "Invalid credentials");
+//            loggedIn = false;
+//            msg = new FacesMessage(FacesMessage.SEVERITY_WARN, "Login Error", "Invalid credentials");
         }
 
         FacesContext.getCurrentInstance().addMessage(null, msg);
